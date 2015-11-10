@@ -1,4 +1,33 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model name="Test1.xcdatamodel" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <elements/>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7701" systemVersion="14F27" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="CourseEntity" representedClassName="CourseEntity" syncable="YES">
+        <attribute name="courseDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="courseId" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="courseImgUrl" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="courseName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isFollow" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <relationship name="course_section" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="SectionEntity" inverseName="section_course" inverseEntity="SectionEntity" syncable="YES"/>
+        <relationship name="course_teacher" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="TeacherEntity" inverseName="teacher_course" inverseEntity="TeacherEntity" syncable="YES"/>
+    </entity>
+    <entity name="SectionEntity" representedClassName="SectionEntity" syncable="YES">
+        <attribute name="chapterId" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="chapterName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="chapterNum" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="sectionId" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="sectionName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sectionNum" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="sectionUrl" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="section_course" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CourseEntity" inverseName="course_section" inverseEntity="CourseEntity" syncable="YES"/>
+    </entity>
+    <entity name="TeacherEntity" representedClassName="TeacherEntity" syncable="YES">
+        <attribute name="teacherDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="teacherId" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="teacherName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="teacher_course" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CourseEntity" inverseName="course_teacher" inverseEntity="CourseEntity" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="CourseEntity" positionX="-63" positionY="-18" width="128" height="150"/>
+        <element name="SectionEntity" positionX="-54" positionY="-9" width="128" height="165"/>
+        <element name="TeacherEntity" positionX="-27" positionY="18" width="128" height="105"/>
+    </elements>
 </model>

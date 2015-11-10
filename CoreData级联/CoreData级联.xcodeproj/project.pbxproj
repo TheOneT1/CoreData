@@ -15,6 +15,10 @@
 		37E75B411BF1E63100270F5B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37E75B401BF1E63100270F5B /* Images.xcassets */; };
 		37E75B441BF1E63100270F5B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37E75B421BF1E63100270F5B /* LaunchScreen.xib */; };
 		37E75B501BF1E63100270F5B /* CoreData__Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E75B4F1BF1E63100270F5B /* CoreData__Tests.m */; };
+		37E75B5B1BF1EF8F00270F5B /* CourseEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E75B5A1BF1EF8F00270F5B /* CourseEntity.m */; };
+		37E75B5E1BF1EF8F00270F5B /* SectionEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E75B5D1BF1EF8F00270F5B /* SectionEntity.m */; };
+		37E75B611BF1EF9000270F5B /* TeacherEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E75B601BF1EF9000270F5B /* TeacherEntity.m */; };
+		37E75B631BF1EFE200270F5B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37E75B621BF1EFE200270F5B /* CoreData.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +46,13 @@
 		37E75B491BF1E63100270F5B /* CoreData级联Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CoreData级联Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		37E75B4E1BF1E63100270F5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37E75B4F1BF1E63100270F5B /* CoreData__Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreData__Tests.m; sourceTree = "<group>"; };
+		37E75B591BF1EF8F00270F5B /* CourseEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CourseEntity.h; sourceTree = "<group>"; };
+		37E75B5A1BF1EF8F00270F5B /* CourseEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CourseEntity.m; sourceTree = "<group>"; };
+		37E75B5C1BF1EF8F00270F5B /* SectionEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SectionEntity.h; sourceTree = "<group>"; };
+		37E75B5D1BF1EF8F00270F5B /* SectionEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SectionEntity.m; sourceTree = "<group>"; };
+		37E75B5F1BF1EF9000270F5B /* TeacherEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeacherEntity.h; sourceTree = "<group>"; };
+		37E75B601BF1EF9000270F5B /* TeacherEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeacherEntity.m; sourceTree = "<group>"; };
+		37E75B621BF1EFE200270F5B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37E75B631BF1EFE200270F5B /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +77,7 @@
 		37E75B241BF1E63100270F5B = {
 			isa = PBXGroup;
 			children = (
+				37E75B621BF1EFE200270F5B /* CoreData.framework */,
 				37E75B2F1BF1E63100270F5B /* CoreData级联 */,
 				37E75B4C1BF1E63100270F5B /* CoreData级联Tests */,
 				37E75B2E1BF1E63100270F5B /* Products */,
@@ -91,6 +104,12 @@
 				37E75B401BF1E63100270F5B /* Images.xcassets */,
 				37E75B421BF1E63100270F5B /* LaunchScreen.xib */,
 				37E75B371BF1E63100270F5B /* CoreData__.xcdatamodeld */,
+				37E75B5F1BF1EF9000270F5B /* TeacherEntity.h */,
+				37E75B601BF1EF9000270F5B /* TeacherEntity.m */,
+				37E75B5C1BF1EF8F00270F5B /* SectionEntity.h */,
+				37E75B5D1BF1EF8F00270F5B /* SectionEntity.m */,
+				37E75B591BF1EF8F00270F5B /* CourseEntity.h */,
+				37E75B5A1BF1EF8F00270F5B /* CourseEntity.m */,
 				37E75B301BF1E63100270F5B /* Supporting Files */,
 			);
 			path = "CoreData级联";
@@ -222,7 +241,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37E75B5E1BF1EF8F00270F5B /* SectionEntity.m in Sources */,
 				37E75B361BF1E63100270F5B /* AppDelegate.m in Sources */,
+				37E75B5B1BF1EF8F00270F5B /* CourseEntity.m in Sources */,
+				37E75B611BF1EF9000270F5B /* TeacherEntity.m in Sources */,
 				37E75B331BF1E63100270F5B /* main.m in Sources */,
 				37E75B3C1BF1E63100270F5B /* ViewController.m in Sources */,
 				37E75B391BF1E63100270F5B /* CoreData__.xcdatamodeld in Sources */,
